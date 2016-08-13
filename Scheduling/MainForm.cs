@@ -6,7 +6,8 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Linq;
 using System.Collections.Generic;
-namespace Cizelgeleme
+
+namespace Scheduling
 {
     public partial class MainForm : Form
     {
@@ -227,7 +228,7 @@ namespace Cizelgeleme
             }
             catch
             {
-                MessageBox.Show("Veri tablosu hatalı");
+                MessageBox.Show("Data table is wrong");
             }
         }
         void btnHideBoxes_Click(object sender, EventArgs e)
@@ -537,7 +538,7 @@ exportableDataText() + Environment.NewLine + "\r\n" +
             writer.WriteLine(model);
             writer.Close();
             Process.Start(path);
-            MessageBox.Show("Model dosyasi masaustune kaydedildi: scheduling_model.gms");
+            MessageBox.Show("Model file has been saved on desktop: scheduling_model.gms");
         }
         static string space(int n)
         {
@@ -580,7 +581,7 @@ exportableDataText() + Environment.NewLine + "\r\n" +
             }
             doc.Add(root);
             doc.Save(destpath);
-            MessageBox.Show("Çıktı kaydedildi\r\n\r\n" + destpath);
+            MessageBox.Show("File has been created\r\n\r\n" + destpath);
         }
         void CreateBoxes(int j,int p,int m)
         {
@@ -607,7 +608,7 @@ exportableDataText() + Environment.NewLine + "\r\n" +
         {
             if (!File.Exists(file))
             {
-                MessageBox.Show("Dosya yerinde bulunamadı!", "HATA");
+                MessageBox.Show("The file cannot exist in the path!", "HATA");
                 return;
             }
             Cursor = Cursors.WaitCursor;

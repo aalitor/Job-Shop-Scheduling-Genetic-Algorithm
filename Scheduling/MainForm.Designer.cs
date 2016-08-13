@@ -1,4 +1,4 @@
-﻿namespace Cizelgeleme
+﻿namespace Scheduling
 {
     partial class MainForm
     {

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Cizelgeleme
+namespace Scheduling
 {
     class GeneticMachine
     {
@@ -190,7 +190,7 @@ namespace Cizelgeleme
                 case MutationTypes.SlipBlock:
                     SlipBlockMutation(child);
                     break;
-                case Cizelgeleme.MutationTypes.Replacement:
+                case Scheduling.MutationTypes.Replacement:
                     ReplacementMutation(child);
                     break;
             }

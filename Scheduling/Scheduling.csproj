@@ -44,9 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AltoTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Colors.cs" />
     <Compile Include="GeneticRunner.cs" />
     <Compile Include="InputBoxProvider.cs" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Cizelgeleme
+namespace Scheduling
 {
     public static class Colors
     {

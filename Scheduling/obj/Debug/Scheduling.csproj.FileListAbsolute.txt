@@ -3,8 +3,8 @@ C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\bin\D
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\bin\Debug\Scheduling.exe
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\bin\Debug\Scheduling.pdb
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Scheduling.csprojResolveAssemblyReference.cache
-C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Cizelgeleme.MainForm.resources
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Scheduling.Properties.Resources.resources
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Scheduling.csproj.GenerateResource.Cache
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Scheduling.exe
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Scheduling.pdb
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling\Scheduling\obj\Debug\Scheduling.MainForm.resources

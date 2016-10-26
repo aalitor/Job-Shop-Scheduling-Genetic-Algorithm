@@ -1,5 +1,5 @@
-# Scheduling-with-Genetic-Algorithyms
-Job Shop Scheduling Solver using Genetic Algorithyms
+# Scheduling-with-Genetic-Algorithm
+Job Shop Scheduling Solver using Genetic Algorithm
 
 This solver application was made for a graduation project in industrial engineering department.
 

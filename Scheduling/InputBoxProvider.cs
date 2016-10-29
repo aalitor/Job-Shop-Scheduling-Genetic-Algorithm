@@ -15,6 +15,8 @@ namespace Scheduling
             w = 20;
             ex = 10;
         }
+
+        #region Create TextBoxes for specific job box
         Panel CreateInputBox(int macs, int procs, int jobIndex)
         {
             int n = macs * procs;
@@ -46,7 +48,9 @@ namespace Scheduling
             }
             return grup;
         }
+        #endregion
 
+        #region TextChanged event for each TextBox
         void InputBoxProvider_TextChanged(object sender, EventArgs e)
         {
             TextBox tb = sender as TextBox;
@@ -60,6 +64,9 @@ namespace Scheduling
             else
                 tb.ForeColor = tb.ForeColor = Color.Black;
         }
+        #endregion
+
+        #region Machine Labels
         Panel CreateMachineBox(int macs)
         {
             Panel grup = new Panel()
@@ -67,22 +74,25 @@ namespace Scheduling
                 Width = macs * (w + ex) + (macs - 1) * space,
                 Height = 15
             };
-                for (int i = 0; i < macs; i++)
+            for (int i = 0; i < macs; i++)
+            {
+                Label lbl = new Label()
                 {
-                    Label lbl = new Label()
-                    {
-                        AutoSize = false,
-                        Width = w,
-                        Height = 15,
-                        Text = "M" + (i + 1),
-                        Location = new Point(i * (w + ex + space), 0),
-                        Font = new Font("Arial", 6.75f),
-                        TextAlign = ContentAlignment.MiddleCenter
-                    };
-                    grup.Controls.Add(lbl);
-                }
+                    AutoSize = false,
+                    Width = w,
+                    Height = 15,
+                    Text = "M" + (i + 1),
+                    Location = new Point(i * (w + ex + space) + 6, 0),
+                    Font = new Font("Arial", 6.75f),
+                    TextAlign = ContentAlignment.MiddleCenter
+                };
+                grup.Controls.Add(lbl);
+            }
             return grup;
-        }
+        } 
+        #endregion
+
+        #region Process Labels
         Panel CreateProcessBox(int procs)
         {
             Panel grup = new Panel()
@@ -105,7 +115,10 @@ namespace Scheduling
                 grup.Controls.Add(lbl);
             }
             return grup;
-        }
+        } 
+        #endregion
+
+        #region Job Labels
         Label CreateJobTitleLabel(int jobIndex, int macs)
         {
             Label lbl = new Label();
@@ -115,8 +128,10 @@ namespace Scheduling
             lbl.TextAlign = ContentAlignment.MiddleCenter;
             lbl.Font = new Font("Arial", 10, FontStyle.Bold);
             return lbl;
-        }
+        } 
+        #endregion
 
+        #region Create specific job box
         Panel CreateJobBox(int macs, int procs, int jobIndex)
         {
             Label title = CreateJobTitleLabel(jobIndex, macs);
@@ -136,7 +151,10 @@ namespace Scheduling
             container.Controls.Add(macBox);
             container.Controls.Add(boxes);
             return container;
-        }
+        } 
+        #endregion
+
+        #region Create all job boxes
         public Panel CreateJobBoxes(int mac, int proc, int job)
         {
             Panel procBox = CreateProcessBox(proc);
@@ -158,7 +176,8 @@ namespace Scheduling
                 x = jobBox.Right - procBox.Width;
             }
             return container;
-        }
+        } 
+        #endregion
 
     }
 }

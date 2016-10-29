@@ -1,5 +1,6 @@
 # Scheduling-with-Genetic-Algorithm
-<h3>This project is open for public use, but please cite this page as main resource.</h3>
+
+<h3>This project is open for public use, but please cite this page as main resource in your work.</h3>
 
 Job Shop Scheduling Solver using Genetic Algorithm
 

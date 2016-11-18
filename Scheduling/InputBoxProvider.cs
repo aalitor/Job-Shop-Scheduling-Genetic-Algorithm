@@ -7,13 +7,13 @@ namespace Scheduling
     class InputBoxProvider
     {
         int space;
-        int w;
-        int ex;
+        int width;
+        int extra;
         public InputBoxProvider()
         {
             space = 2;
-            w = 20;
-            ex = 10;
+            width = 22;
+            extra = 10;
         }
 
         #region Create TextBoxes for specific job box
@@ -23,8 +23,8 @@ namespace Scheduling
             TextBox[] boxes = new TextBox[n];
             Panel grup = new Panel()
             {
-                Width = (w + ex) * macs + (macs - 1) * space,
-                Height = w * procs + (procs - 1) * space,
+                Width = (width + extra) * macs + (macs - 1) * space,
+                Height = width * procs + (procs - 1) * space,
                 Name = "boxer"
             };
             int a = 0;
@@ -35,9 +35,9 @@ namespace Scheduling
                     boxes[a] = new TextBox()
                     {
                         Font = new Font("Arial", 8f),
-                        Location = new Point(j * (w + ex + space), i * (w + space)),
+                        Location = new Point(j * (width + extra + space), i * (width + space)),
                         Name = "j" + jobIndex + "p" + (i + 1) + "m" + (j + 1),
-                        Size = new Size(w + ex, w),
+                        Size = new Size(width + extra, width),
                         Multiline = false,
                         TextAlign = HorizontalAlignment.Center
                     };
@@ -71,7 +71,7 @@ namespace Scheduling
         {
             Panel grup = new Panel()
             {
-                Width = macs * (w + ex) + (macs - 1) * space,
+                Width = macs * (width + extra) + (macs - 1) * space,
                 Height = 15
             };
             for (int i = 0; i < macs; i++)
@@ -79,10 +79,10 @@ namespace Scheduling
                 Label lbl = new Label()
                 {
                     AutoSize = false,
-                    Width = w,
+                    Width = width,
                     Height = 15,
                     Text = "M" + (i + 1),
-                    Location = new Point(i * (w + ex + space) + 6, 0),
+                    Location = new Point(i * (width + extra + space) + 6, 0),
                     Font = new Font("Arial", 6.75f),
                     TextAlign = ContentAlignment.MiddleCenter
                 };
@@ -97,18 +97,18 @@ namespace Scheduling
         {
             Panel grup = new Panel()
             {
-                Width = w,
-                Height = procs * w + (procs - 1)
+                Width = width,
+                Height = procs * width + (procs - 1)
             };
             for (int i = 0; i < procs; i++)
             {
                 Label lbl = new Label()
                 {
                     AutoSize = false,
-                    Width = w,
-                    Height = w,
+                    Width = width,
+                    Height = width,
                     Text = "P" + (i + 1),
-                    Location = new Point(0, i * (w + space)),
+                    Location = new Point(0, i * (width + space)),
                     Font = new Font("Arial", 6.75f),
                     TextAlign = ContentAlignment.MiddleCenter
                 };
@@ -123,7 +123,7 @@ namespace Scheduling
         {
             Label lbl = new Label();
             lbl.AutoSize = false;
-            lbl.Width = macs * (w + ex) + (macs - 1) * space; //Bosluklarla beraber toplam genislik: bosluk = 1px
+            lbl.Width = macs * (width + extra) + (macs - 1) * space; //Bosluklarla beraber toplam genislik: bosluk = 1px
             lbl.Text = "J" + jobIndex;
             lbl.TextAlign = ContentAlignment.MiddleCenter;
             lbl.Font = new Font("Arial", 10, FontStyle.Bold);

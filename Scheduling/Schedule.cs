@@ -88,7 +88,7 @@ namespace Scheduling
 
             }
             
-            //
+            
             makeSpanCalculated = true;
             return makeSpan;
         }
@@ -107,9 +107,9 @@ namespace Scheduling
             int job = j;
             int horSpace = 40;
             int vertSpace = 60;
-            panel.Height = (mac * 25 + vertSpace);
             int delWidth = 0;
-            //Draw job delegate colors
+
+            #region Draw job delegate signs
             for (int i = 0; i < job; i++)
             {
                 Rectangle rect = new Rectangle(50 * i + horSpace, 5, 15, 15);
@@ -123,11 +123,14 @@ namespace Scheduling
                 }
                 if (i == job - 1)
                     delWidth = tp.X + 20;
-            }
-            panel.Width = (int)Math.Max(delWidth, makeSpan + horSpace + 15) + 30;
+            } 
+            #endregion
 
-            //Draw measure lines and texts
-            PointF itPo = Point.Empty;
+            panel.Height = (mac * 25 + vertSpace);
+            panel.Width = (int)Math.Max(delWidth, makeSpan + horSpace + 15) + 35;
+            grp.DrawRectangle(Pens.Black, 2, 2, panel.Width - 4, panel.Height - 8);
+
+            #region Draw measure lines and texts
             int idWidth = 0;
             int num = (int)((makeSpan + 5) / 25);
             for (int i = 0; i <= num; i++)
@@ -143,8 +146,10 @@ namespace Scheduling
                     grp.DrawString(text, font, Brushes.DarkGray, tp);
 
                 }
-            }
-            //Draw background rectangles [height = 15]
+            } 
+            #endregion
+            #region Draw gray background rectangles
+            PointF itPo = Point.Empty;
             RectangleF[] backRects = new RectangleF[mac];
             for (int i = 0; i < mac; i++)
             {
@@ -164,8 +169,9 @@ namespace Scheduling
                     grp.DrawString(idle, font, Brushes.DarkGray, itPo.X + idWidth / 2 - size.Width / 2,
                                                                     backRects[i].Y + backRects[i].Height / 2 - size.Height / 2 + 2);
                 }
-            }
-            //Draw machine texts
+            } 
+            #endregion
+            #region Draw machine texts
             for (int i = 0; i < mac; i++)
             {
                 using (Font font = new Font("Arial", 10))
@@ -176,29 +182,26 @@ namespace Scheduling
                     grp.DrawString(text, font, Brushes.Gray, tp);
 
                 }
-            }
-            //Draw process bars and texts
+            } 
+            #endregion
+            #region Draw process bars and texts
             for (int i = 0; i < job; i++)
             {
                 for (int b = 0; b < proc; b++)
                 {
-                    int work = i;
-                    int islem = b;
+                    int tempJob = i;
+                    int tempProc = b;
                     int o = i * p + b;
-                    int makine = macSchedule[o];
+                    int tempMac = macSchedule[o];
 
                     float x = startTimes[i, b] + horSpace;
-                    float y = backRects[makine].Y;
+                    float y = backRects[tempMac].Y;
                     float height = 15;
-                    float time = Data.DataTable[i, b, makine];
-                    float normWidth = 0;
-                    float fuzWidth = 0;
-                        fuzWidth = 0;
-                        normWidth = time;
-                    
+                    float time = Data.DataTable[i, b, tempMac];
+
                     PointF ps1 = new PointF(x, y + 15);
-                    PointF ps2 = new PointF(x + fuzWidth, ps1.Y - height);
-                    PointF ps3 = new PointF(ps2.X + normWidth, ps2.Y);
+                    PointF ps2 = new PointF(x, ps1.Y - height);
+                    PointF ps3 = new PointF(ps2.X + time, ps2.Y);
                     PointF ps4 = new PointF(ps3.X, ps3.Y + height);
 
                     GraphicsPath path = new GraphicsPath();
@@ -220,14 +223,15 @@ namespace Scheduling
                         if (size.Width > bar.Width)
                         {
                             text = (b + 1).ToString();
-                            size = TextRenderer.MeasureText(text,font);
+                            size = TextRenderer.MeasureText(text, font);
                         }
                         PointF tp = new PointF(bar.X + bar.Width / 2 - size.Width / 2 + 3, bar.Y + height / 2 - size.Height / 2 + 1);
                         grp.DrawString(text, font, Brushes.Black, tp);
                     }
 
                 }
-            }
+            } 
+            #endregion
         }
         
         #endregion

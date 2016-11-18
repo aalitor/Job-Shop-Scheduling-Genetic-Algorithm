@@ -17,3 +17,12 @@ C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling-with-Genetic-Alg
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling-with-Genetic-Algorithyms\Scheduling\obj\Debug\Scheduling.MainForm.resources
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling-with-Genetic-Algorithyms\Scheduling\obj\Debug\Scheduling.Properties.Resources.resources
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\Scheduling-with-Genetic-Algorithyms\Scheduling\obj\Debug\Scheduling.csproj.GenerateResource.Cache
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\bin\Debug\Scheduling.exe.config
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\bin\Debug\Scheduling.exe
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\bin\Debug\Scheduling.pdb
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\obj\Debug\Scheduling.csprojResolveAssemblyReference.cache
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\obj\Debug\Scheduling.MainForm.resources
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\obj\Debug\Scheduling.Properties.Resources.resources
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\obj\Debug\Scheduling.csproj.GenerateResource.Cache
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\obj\Debug\Scheduling.exe
+C:\Users\ali93\Documents\Visual Studio 2013\Projects\JSSP-with-Genetic-Algorithm\Scheduling\obj\Debug\Scheduling.pdb

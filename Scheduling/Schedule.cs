@@ -112,7 +112,7 @@ namespace Scheduling
             #region Draw job delegate signs
             for (int i = 0; i < job; i++)
             {
-                Rectangle rect = new Rectangle(50 * i + horSpace, 5, 15, 15);
+                Rectangle rect = new Rectangle(50 * i + horSpace, 15, 15, 15);
                 string text = "J" + (i + 1);
                 Point tp = new Point(rect.Right + 3, rect.Y);
                 using (Font font = new Font("Arial", 10))
@@ -126,7 +126,7 @@ namespace Scheduling
             } 
             #endregion
 
-            panel.Height = (mac * 25 + vertSpace);
+            panel.Height = (mac * 25 + vertSpace) + 15;
             panel.Width = (int)Math.Max(delWidth, makeSpan + horSpace + 15) + 35;
             grp.DrawRectangle(Pens.Black, 2, 2, panel.Width - 4, panel.Height - 8);
 
@@ -148,6 +148,7 @@ namespace Scheduling
                 }
             } 
             #endregion
+
             #region Draw gray background rectangles
             PointF itPo = Point.Empty;
             RectangleF[] backRects = new RectangleF[mac];
@@ -171,6 +172,7 @@ namespace Scheduling
                 }
             } 
             #endregion
+
             #region Draw machine texts
             for (int i = 0; i < mac; i++)
             {
@@ -184,6 +186,7 @@ namespace Scheduling
                 }
             } 
             #endregion
+
             #region Draw process bars and texts
             for (int i = 0; i < job; i++)
             {

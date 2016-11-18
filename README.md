@@ -10,4 +10,4 @@ The main function of this program is to get acceptable solutions in an acceptabl
 
 The application contains a matrix data table that enables users to enter specific datas which refers to completion time of processes to create the problem. After the "RUN" button is clicked, the program starts scanning the solutions and drawing it into the chart area. It is so simple and clear to use.
 
-<img src="http://i.imgur.com/60eeEoZ.png"></img>
+<img src="http://i.imgur.com/MWebO4K.png"></img>
